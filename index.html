@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Clicker Game Ultime</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Score : <span id="score">0</span></h1>
+        <h3>Par seconde : <span id="pps">0</span></h3>
+        <p id="booster-status" class="hidden">⚡ Booster Active (x2) : <span id="booster-timer">10</span>s</p>
+        
+        <!-- Bouton de clic principal -->
+        <button id="click-btn">Clique-moi !</button>
+
+        <!-- Boutique -->
+        <div class="shop">
+            <h2>Boutique</h2>
+            
+            <div class="upgrade-item">
+                <button id="upgrade-click-btn">Multiplicateur de Clic (+1/clic)<br>Coût: <span id="cost-click">10</span></button>
+            </div>
+            
+            <div class="upgrade-item">
+                <button id="upgrade-auto-btn">Auto-Clicker (+1/s)<br>Coût: <span id="cost-auto">50</span></button>
+            </div>
+
+            <div class="upgrade-item">
+                <button id="upgrade-super-auto-btn">Super Auto-Clicker (+10/s)<br>Coût: <span id="cost-super-auto">500</span></button>
+            </div>
+
+            <div class="upgrade-item">
+                <button id="boost-btn">⚡ Booster x2 (10 sec)<br>Coût: <span id="cost-boost">200</span></button>
+            </div>
+        </div>
+
+        <!-- Notification de succès (Toast) -->
+<div id="toast" class="toast hidden"></div>
+
+<div class="game-container">
+    <!-- ... [votre code existant] ... -->
+
+    <!-- Section Succès -->
+    <div class="achievements-container">
+        <h2>🏆 Succès (<span id="unlocked-count">0</span>/<span id="total-count">0</span>)</h2>
+        <div id="achievements-list"></div>
+    </div>
+
+    <div class="controls">
+        <button id="reset-btn">🔄 Réinitialiser la partie</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
